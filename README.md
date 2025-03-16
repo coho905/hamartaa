@@ -14,4 +14,4 @@ Predicted class: Indian elephant, Elephas maximus
 
 ![Elephant](photos/elephant.jpg)
 ->
-![Elephant](photos/adverse_elephant.jpg)
+![Elephant](photos/elephant_adverse.jpg)
