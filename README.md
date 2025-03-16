@@ -5,9 +5,7 @@ hamartaa is the anglicization of the Finnish word for blur.
 
 ## Example:
 
-True Class: 386: African Elephant
-
-Results after hamaarta:
+### Results after hamaarta:
 
 Final prediction: Class 385 with 1.0000 confidence
 Attack successful
