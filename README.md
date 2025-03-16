@@ -12,4 +12,6 @@ Attack successful
 True class: African elephant, Loxodonta africana
 Predicted class: Indian elephant, Elephas maximus
 
-<img href='/photo/elephant.jpg'>
+![Elephant](photos/elephant.jpg)
+->
+![Elephant](photos/adverse_elephant.jpg)
