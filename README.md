@@ -7,9 +7,9 @@ hamartaa is the anglicization of the Finnish word for blur.
 
 ### Results after hamaarta:
 
-Final prediction: Class 385 with 1.0000 confidence
-Attack successful
-True class: African elephant, Loxodonta africana
+Final prediction: Class 385 with 1.0000 confidence <br>
+Attack successful <br>
+True class: African elephant, Loxodonta africana<br>
 Predicted class: Indian elephant, Elephas maximus
 
 ![Elephant](photos/elephant2.jpg)
