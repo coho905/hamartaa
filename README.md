@@ -11,3 +11,5 @@ Final prediction: Class 385 with 1.0000 confidence
 Attack successful
 True class: African elephant, Loxodonta africana
 Predicted class: Indian elephant, Elephas maximus
+
+<img href='/photo/elephant.jpg'>
