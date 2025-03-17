@@ -3,6 +3,12 @@ import torchvision.models as models
 from torchvision import transforms
 from PIL import Image
 from labels import get_label
+
+IMG_PATH = 'photos/german_shep.jpg'
+animal = 'german_shep'
+true_label = 235
+
+
 model = models.mobilenet_v2(pretrained=True)
 model.eval()
 
@@ -11,10 +17,9 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-img = Image.open('elephant.jpg')
+img = Image.open(IMG_PATH)
 transformed_image = transform(img)
 loss_function = torch.nn.CrossEntropyLoss()
-true_label = 386
 def affect_image_adversarially(image, epochs, loss_function, true_label, scaling_factor):
     new_image = image.clone().detach().requires_grad_(True)
     for i in range(0, epochs):
@@ -33,7 +38,7 @@ def affect_image_adversarially(image, epochs, loss_function, true_label, scaling
     return new_image
 
 
-adversarial_image = affect_image_adversarially(transformed_image, 50, loss_function, true_label, 0.01)
+adversarial_image = affect_image_adversarially(transformed_image, 150, loss_function, true_label, 0.01)
 final_img = transforms.ToPILImage()(adversarial_image.squeeze(0))
 
 with torch.no_grad():
@@ -47,5 +52,5 @@ print(f"Final prediction: Class {final_pred} with {final_conf:.4f} confidence")
 print(f"Attack {'successful' if final_pred != true_label else 'failed'}")
 print(f"True class: {get_label(true_label)}")
 print(f"Predicted class: {get_label(final_pred)}")
-final_img.save('adversarial_elephant.jpg')
+final_img.save(f'photos/adversarial_{animal}.jpg')
 final_img.show()
