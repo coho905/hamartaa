@@ -21,3 +21,7 @@ Final prediction: Class 270 with 1.0000 confidence <br>
 Attack successful <br>
 True class: German shepherd, German shepherd dog, German police dog, alsatian <br>
 Predicted class: white wolf, Arctic wolf, Canis lupus tundrarum <br>
+
+![German Shep](photos/german_shep.jpg)
+->
+![German Shep](photos/adversarial_german_shep.jpg)
